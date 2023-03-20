@@ -1,6 +1,7 @@
 
 #include <iostream>
 #include "Fractional.h"
+#include <exception>
 
 int main()
 {
@@ -14,4 +15,12 @@ int main()
     Fractional f3 = 3 + f;
     f3 += f1;
     std::cout << f3;
+    try
+    {
+        Fractional f(7, 0);
+    }
+    catch (const std::runtime_error& ex)
+    {
+        std::cout << ex.what() << std::endl;
+    }
 }

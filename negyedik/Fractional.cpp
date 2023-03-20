@@ -1,10 +1,15 @@
 #include "Fractional.h"
+#include <exception>
 
 Fractional::Fractional(const int16_t numerator, const uint16_t denumerator)
 	:mEnumerator(numerator)
 	, nDenumerator(denumerator)
 {
-	
+	if (nDenumerator ==0)
+	{
+		//throw std::string("Invalid");
+		throw std::runtime_error("Invalid");
+	}
 }
 Fractional::Fractional(const int16_t num)
 	:mEnumerator(num)

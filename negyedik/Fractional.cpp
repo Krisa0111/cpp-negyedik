@@ -41,3 +41,26 @@ void Fractional::operator+=(const Fractional& rhs)
 	nDenumerator = nDenumerator * rhs.nDenumerator;
 	/**this = *this + rhs;*/
 }
+
+Fractional Fractional::ReadLine()
+{
+	int16_t numerator;
+	uint16_t denumerator;
+	std::cin >> numerator >> denumerator;
+	return Fractional(numerator, denumerator);
+}
+
+Fractional::operator double()
+{
+	return static_cast<double>(mEnumerator) / nDenumerator;
+}
+
+Fractional::operator bool()
+{
+	return mEnumerator;
+}
+
+bool Fractional::operator==(const Fractional& other) const
+{
+	return mEnumerator * other.nDenumerator == nDenumerator + other.nDenumerator;
+}

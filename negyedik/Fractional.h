@@ -10,6 +10,15 @@ public:
 
 	void operator+=(const Fractional& rhs);
 
+	static Fractional ReadLine();
+
+	explicit operator double();
+
+	explicit operator bool();
+	bool operator==(const Fractional& other) const;
+	bool operator!=(const Fractional& other) const;
+
+
 	friend std::ostream& operator<<(std::ostream& outputstream, const Fractional& fractional);
 	Fractional operator+(const Fractional& rhs);
 private:

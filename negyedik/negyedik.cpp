@@ -23,4 +23,14 @@ int main()
     {
         std::cout << ex.what() << std::endl;
     }
+
+    Fractional f4 = Fractional::ReadLine();
+    std::cout << f << std::endl;
+
+    //double d = static_cast<double>(f1);
+    if (f1)
+    {
+
+    }
+    f1 == f2;
 }
